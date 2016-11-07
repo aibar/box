@@ -31,7 +31,6 @@ ln -s /bin/busybox bin/uname
 ln -s /bin/busybox bin/dirname
 ln -s /bin/busybox bin/expr
 
-sudo chown -R 0 bin
-sudo chgrp -R 0 bin
+sudo chown -R 0:0 bin
 
 tar czfv ../fs.tar.gz ./*

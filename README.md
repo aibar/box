@@ -1,3 +1,3 @@
-## Docker image based on http://busybox.net
+## Docker Image based on http://busybox.net
 
     FROM aibar/box
