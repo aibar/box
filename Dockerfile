@@ -1,5 +1,5 @@
-FROM aibar/empty
+FROM walkingdevs/empty
 
 ENTRYPOINT ["sh"]
 
-ADD fs.tar.gz /
+ADD rootfs.tar.gz /

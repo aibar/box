@@ -1,0 +1,37 @@
+FROM debian:8.6
+
+RUN apt-get update && apt-get install wget -y
+
+RUN \
+    mkdir -pv /out/bin && \
+
+    wget https://busybox.net/downloads/binaries/busybox-x86_64 -O /out/bin/busybox && \
+    chmod +x /out/bin/busybox && \
+
+    cd /out/bin && \
+
+    ln -s /bin/busybox cat && \
+    ln -s /bin/busybox chmod && \
+    ln -s /bin/busybox cp && \
+    ln -s /bin/busybox ln && \
+    ln -s /bin/busybox ls && \
+    ln -s /bin/busybox mkdir && \
+    ln -s /bin/busybox mv && \
+    ln -s /bin/busybox rm && \
+    ln -s /bin/busybox sh && \
+    ln -s /bin/busybox tar && \
+    ln -s /bin/busybox touch && \
+    ln -s /bin/busybox wget && \
+
+    ln -s /bin/busybox sed && \
+    ln -s /bin/busybox ps && \
+    ln -s /bin/busybox tr && \
+    ln -s /bin/busybox cut && \
+    ln -s /bin/busybox id && \
+    ln -s /bin/busybox env && \
+    ln -s /bin/busybox uname && \
+    ln -s /bin/busybox dirname && \
+    ln -s /bin/busybox expr && \
+
+    cd /out && \
+    tar czfv /rootfs.tar.gz ./*

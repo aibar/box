@@ -1,3 +1,5 @@
 ## Docker Image based on http://busybox.net
 
-    FROM aibar/box
+    FROM walkingdevs/box
+
+## No Libc included!
